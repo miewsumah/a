@@ -220,6 +220,7 @@ head(impute)
 
 ```r
 wkactivity <- aggregate(steps ~ wk+interval, data=impute, FUN=mean)
+
 library(lattice)
 xyplot(steps ~ interval | factor(wk),
        layout = c(1, 2),

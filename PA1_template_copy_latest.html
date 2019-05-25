@@ -490,6 +490,7 @@ head(impute)</code></pre>
 ## 5 0.0754717 2012-10-01       20 weekday
 ## 6 2.0943396 2012-10-01       25 weekday</code></pre>
 <pre class="r"><code>wkactivity &lt;- aggregate(steps ~ wk+interval, data=impute, FUN=mean)
+
 library(lattice)
 xyplot(steps ~ interval | factor(wk),
        layout = c(1, 2),
